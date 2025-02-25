@@ -1,4 +1,12 @@
 const container = document.querySelector(".container");
+initiateGrids();
+// const grids = document.querySelectorAll(".container div");
+
+// grids.forEach((aGrid)=> {
+//     aGrid.addEventListener("mouseover", (e) => {
+
+//     });
+// });
 
 function initiateGrids() {
     
@@ -11,5 +19,3 @@ function initiateGrids() {
     }
     
 }
-
-initiateGrids()
