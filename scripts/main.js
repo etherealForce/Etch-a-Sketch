@@ -1,6 +1,6 @@
 const container = document.querySelector(".container");
 initiateGrids();
-// const grids = document.querySelectorAll(".container div");
+const grids = document.querySelectorAll(".container div");
 
 // grids.forEach((aGrid)=> {
 //     aGrid.addEventListener("mouseover", (e) => {
