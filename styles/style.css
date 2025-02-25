@@ -19,7 +19,7 @@ body {
     flex-flow: row wrap;
 }
 
-/* .container div {
+.container div {
     border: 1px solid black;
     flex: 1 1 auto;
-} */
+}
