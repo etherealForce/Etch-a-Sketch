@@ -8,11 +8,20 @@
     background-color:#6d6767;
     display: flex;
     justify-content: space-between;
+    padding: 15px 30px 15px 25px;
+    align-items: center;
+    background-color: #000000;
+}
+
+.header img {
+    width: auto;
+    height: 50px;
 }
 
 .header h3 {
     font-weight: 900;
     font-size: 30px;
+    color: #d0d3d7;
 }
 
 body {
