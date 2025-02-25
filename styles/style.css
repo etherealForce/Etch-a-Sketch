@@ -21,7 +21,7 @@ body {
 
 .container div {
     border: 1px solid black;
-    min-width: 5px;
-    min-height: 5px;
+    width: 29.411px;
+    height: 29.411px;
     flex: 1 1 auto;
 }
