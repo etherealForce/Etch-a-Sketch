@@ -3,6 +3,16 @@
     padding: 0;
 }
 
+body {
+    display: flex;
+    flex-flow:column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
 .container {
     border: 5px solid black;
+    margin: 100px;
+    width: 500px;
+    height: 500px;
 }
