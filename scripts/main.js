@@ -4,7 +4,7 @@ const grids = document.querySelectorAll(".container div");
 
 grids.forEach((aGrid)=> {
     aGrid.addEventListener("mouseover", (e) => {
-        aGrid.style.color = "";
+        // aGrid.style.cssText = `background-color: rgb(${rgbNoGenerator()}, ${rgbNoGenerator()}, ${rgbNoGenerator()})`;
     });
 });
 
@@ -17,5 +17,8 @@ function initiateGrids() {
             container.appendChild(grid);
         }       
     }
-    
+}
+
+function rgbNoGenerator() {
+    return Math.floor(Math.random() * 256);
 }
