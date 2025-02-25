@@ -4,7 +4,7 @@ const grids = document.querySelectorAll(".container div");
 
 grids.forEach((aGrid)=> {
     aGrid.addEventListener("mouseover", (e) => {
-        // aGrid.style.cssText = `background-color: rgb(${rgbNoGenerator()}, ${rgbNoGenerator()}, ${rgbNoGenerator()})`;
+        aGrid.style.cssText = `background-color: rgb(${rgbNoGenerator()}, ${rgbNoGenerator()}, ${rgbNoGenerator()})`;
     });
 });
 
