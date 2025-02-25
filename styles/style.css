@@ -15,4 +15,11 @@ body {
     margin: 100px;
     width: 500px;
     height: 500px;
+    display: flex;
+    flex-flow: row wrap;
 }
+
+/* .container div {
+    border: 1px solid black;
+    flex: 1 1 auto;
+} */
