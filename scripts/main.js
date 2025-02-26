@@ -4,12 +4,24 @@ initiateGrids();
 const grids = document.querySelectorAll(".container div");
 const gridAdjustor = document.querySelector("#openPrompt");
 
-gridAdjustor.addEventListener("click", (e) => {
-
+gridAdjustor.addEventListener("click", () => {
+    let userInput;
+    while (true) {
+        userInput = prompt("A number less than 100 for grid size.");
+        if (userInput === "" || userInput === null) {
+            alert("Input cancelled")
+            break;
+        } else if (userInput > 100) {
+            alert("LESS THAN 100!");
+            continue;
+        } else {
+            initiateGrids(userInput);
+        }
+    }
 });
 
 grids.forEach((aGrid)=> {
-    aGrid.addEventListener("mouseover", (e) => {
+    aGrid.addEventListener("mouseover", () => {
         aGrid.style.cssText = `background-color: rgb(${rgbNoGenerator()}, ${rgbNoGenerator()}, ${rgbNoGenerator()})`;
     });
 });
