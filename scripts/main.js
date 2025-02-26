@@ -1,7 +1,6 @@
 const container = document.querySelector(".container");
 const containerSize = 500;
 initiateGrids();
-const grids = document.querySelectorAll(".container div");
 const gridAdjustor = document.querySelector("#openPrompt");
 
 gridAdjustor.addEventListener("click", () => {
@@ -9,7 +8,8 @@ gridAdjustor.addEventListener("click", () => {
     while (true) {
         userInput = prompt("A number less than 100 for grid size.");
         if (userInput === "" || userInput === null) {
-            alert("Input cancelled")
+            alert("Input cancelled");
+            // initiateGrids();
             break;
         } else if (userInput > 100) {
             alert("LESS THAN 100!");
@@ -26,6 +26,7 @@ gridAdjustor.addEventListener("click", () => {
 
 function initiateGrids(gridNum = 16) {
     
+
     for (let i = 1; i <= gridNum; i++) {
         for (let j = 1; j <= gridNum; j++) {
             let grid = document.createElement("div");
@@ -33,14 +34,15 @@ function initiateGrids(gridNum = 16) {
             container.appendChild(grid);
         }       
     }
+    const grids = document.querySelectorAll(".container div");
+    grids.forEach((aGrid)=> {
+        aGrid.addEventListener("mouseover", () => {
+            aGrid.style.cssText += `background-color: rgb(${rgbNoGenerator()}, ${rgbNoGenerator()}, ${rgbNoGenerator()})`;
+        });
+    });
+    
 }
 
 function rgbNoGenerator() {
     return Math.floor(Math.random() * 256);
 }
-
-grids.forEach((aGrid)=> {
-    aGrid.addEventListener("mouseover", () => {
-        aGrid.style.cssText += `background-color: rgb(${rgbNoGenerator()}, ${rgbNoGenerator()}, ${rgbNoGenerator()})`;
-    });
-});
