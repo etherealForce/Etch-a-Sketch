@@ -35,7 +35,8 @@ function initiateGrids(gridNum = 16) {
         }       
     }
     const grids = document.querySelectorAll(".container div");
-    rainbowGrids(grids);
+    // rainbowGrids(grids);
+    normalGrids(grids);
     
 }
 
@@ -49,4 +50,12 @@ function rainbowGrids(grids) {
             aGrid.style.cssText += `background-color: rgb(${rgbNoGenerator()}, ${rgbNoGenerator()}, ${rgbNoGenerator()})`;
         });
     });
+}
+
+function normalGrids(grids) {
+    grids.forEach((aGrid) => {
+        aGrid.addEventListener("mouseover", function () {
+            this.style.cssText += "background-color:rgba(33, 36, 43, 0.71);"
+        })
+    })
 }
