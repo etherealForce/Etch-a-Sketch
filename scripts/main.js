@@ -2,9 +2,9 @@ const container = document.querySelector(".container");
 initiateGrids();
 const grids = document.querySelectorAll(".container div");
 const gridAdjustor = document.querySelector("#openPrompt");
-
+const containerSize = 500;
 gridAdjustor.addEventListener("click", (e) => {
-    
+
 });
 
 grids.forEach((aGrid)=> {
@@ -13,12 +13,12 @@ grids.forEach((aGrid)=> {
     });
 });
 
-function initiateGrids() {
+function initiateGrids(gridNum = 16) {
     
-    for (let i = 1; i <= 16; i++) {
-        for (let j = 1; j <= 16; j++) {
+    for (let i = 1; i <= gridNum; i++) {
+        for (let j = 1; j <= gridNum; j++) {
             let grid = document.createElement("div");
-            
+            grid.style.cssText = `width: ${containerSize / gridNum}px; height: ${containerSize / gridNum}px`;
             container.appendChild(grid);
         }       
     }
