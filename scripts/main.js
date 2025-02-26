@@ -35,14 +35,18 @@ function initiateGrids(gridNum = 16) {
         }       
     }
     const grids = document.querySelectorAll(".container div");
-    grids.forEach((aGrid)=> {
-        aGrid.addEventListener("mouseover", () => {
-            aGrid.style.cssText += `background-color: rgb(${rgbNoGenerator()}, ${rgbNoGenerator()}, ${rgbNoGenerator()})`;
-        });
-    });
+    rainbowGrids(grids);
     
 }
 
 function rgbNoGenerator() {
     return Math.floor(Math.random() * 256);
+}
+
+function rainbowGrids(grids) {
+    grids.forEach((aGrid)=> {
+        aGrid.addEventListener("mouseover", () => {
+            aGrid.style.cssText += `background-color: rgb(${rgbNoGenerator()}, ${rgbNoGenerator()}, ${rgbNoGenerator()})`;
+        });
+    });
 }
