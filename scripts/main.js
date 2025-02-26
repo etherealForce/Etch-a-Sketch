@@ -15,16 +15,14 @@ gridAdjustor.addEventListener("click", () => {
             alert("LESS THAN 100!");
             continue;
         } else {
-            initiateGrids(userInput);
+            break;
         }
     }
+    container.innerHTML = "";
+    initiateGrids(+userInput);
 });
 
-grids.forEach((aGrid)=> {
-    aGrid.addEventListener("mouseover", () => {
-        aGrid.style.cssText = `background-color: rgb(${rgbNoGenerator()}, ${rgbNoGenerator()}, ${rgbNoGenerator()})`;
-    });
-});
+
 
 function initiateGrids(gridNum = 16) {
     
@@ -40,3 +38,9 @@ function initiateGrids(gridNum = 16) {
 function rgbNoGenerator() {
     return Math.floor(Math.random() * 256);
 }
+
+grids.forEach((aGrid)=> {
+    aGrid.addEventListener("mouseover", () => {
+        aGrid.style.cssText = `background-color: rgb(${rgbNoGenerator()}, ${rgbNoGenerator()}, ${rgbNoGenerator()})`;
+    });
+});
