@@ -36,11 +36,16 @@ body {
     background-color: #958989;
     padding: 20px;
     flex: 1 1 auto;
+    flex-flow: column nowrap;
+}
+
+.buttonPanel {
+    display: flex;
+    justify-content: center;
 }
 
 .container {
     border: 5px solid black;
-    /* margin: 60px; */
     width: 500px;
     height: 500px;
     display: flex;
