@@ -35,7 +35,7 @@ body {
     display: flex;
     background-color: #958989;
     padding: 20px;
-    /* flex: 1 1 auto; */
+    flex: 1 1 auto;
 }
 
 .container {
