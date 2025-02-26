@@ -19,7 +19,7 @@ gridAdjustor.addEventListener("click", () => {
         }
     }
     container.innerHTML = "";
-    // initiateGrids(+userInput);
+    initiateGrids(+userInput);
 });
 
 
@@ -29,7 +29,7 @@ function initiateGrids(gridNum = 16) {
     for (let i = 1; i <= gridNum; i++) {
         for (let j = 1; j <= gridNum; j++) {
             let grid = document.createElement("div");
-            grid.style.cssText = `width: ${containerSize / (gridNum + 1)}px; height: ${containerSize / (gridNum + 1)}px`;
+            grid.style.cssText = `width: ${containerSize / (gridNum)}px; height: ${containerSize / (gridNum)}px`;
             container.appendChild(grid);
         }       
     }
