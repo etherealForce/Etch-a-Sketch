@@ -19,7 +19,7 @@ gridAdjustor.addEventListener("click", () => {
         }
     }
     container.innerHTML = "";
-    initiateGrids(+userInput);
+    // initiateGrids(+userInput);
 });
 
 
@@ -41,6 +41,6 @@ function rgbNoGenerator() {
 
 grids.forEach((aGrid)=> {
     aGrid.addEventListener("mouseover", () => {
-        aGrid.style.cssText = `background-color: rgb(${rgbNoGenerator()}, ${rgbNoGenerator()}, ${rgbNoGenerator()})`;
+        aGrid.style.cssText += `background-color: rgb(${rgbNoGenerator()}, ${rgbNoGenerator()}, ${rgbNoGenerator()})`;
     });
 });
