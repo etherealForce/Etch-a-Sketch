@@ -9,7 +9,6 @@ gridAdjustor.addEventListener("click", () => {
         userInput = prompt("A number less than 100 for grid size.");
         if (userInput === "" || userInput === null) {
             alert("Input cancelled");
-            initiateGrids();
             break;
         } else if (userInput > 100) {
             alert("LESS THAN 100!");
@@ -55,7 +54,7 @@ function rainbowGrids(grids) {
 function normalGrids(grids) {
     grids.forEach((aGrid) => {
         aGrid.addEventListener("mouseover", function () {
-            this.style.cssText += "background-color:rgba(33, 36, 43, 0.71);"
+            this.style.cssText += "background-color:rgba(33, 36, 43, 0.71);";
         })
     })
 }
