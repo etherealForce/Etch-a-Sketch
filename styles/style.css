@@ -42,16 +42,18 @@ body {
 .buttonPanel button {
     border-radius: 10px;
     background-color: #5a686e;
-    border: 2px solid #e6dede;
+    border: 5px solid #292a26;
     width: auto;
-    /* height: 50px;
-    padding: 15px; */
+    height: 55px;
+    padding: 0 15px;
+    font-size: 15px;
     color : #beb9b9;
     font-weight: bold;
 }
 
 .buttonPanel button:hover {
     background-color: #857373;
+    border-color: #64695a;
 }
 
 
