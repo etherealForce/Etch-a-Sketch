@@ -2,6 +2,8 @@ const container = document.querySelector(".container");
 const containerSize = 500;
 initiateGrids();
 const gridAdjustor = document.querySelector("#openPrompt");
+const rainbowBtn = document.querySelector("#rainbow");
+const normalBtn = document.querySelector("#normal");
 
 gridAdjustor.addEventListener("click", () => {
     let userInput;
@@ -24,7 +26,7 @@ gridAdjustor.addEventListener("click", () => {
 
 
 
-function initiateGrids(gridNum = 16) {
+function initiateGrids(gridNum = 16, gridColor) {
     
     for (let i = 1; i <= gridNum; i++) {
         for (let j = 1; j <= gridNum; j++) {
