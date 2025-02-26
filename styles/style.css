@@ -29,9 +29,15 @@ body {
     flex-flow:column nowrap;
 }
 
+.window {
+    display: flex;
+    background-color: #958989;
+    padding: 20px;
+}
+
 .container {
     border: 5px solid black;
-    margin: 100px;
+    /* margin: 60px; */
     width: 500px;
     height: 500px;
     display: flex;
