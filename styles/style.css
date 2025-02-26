@@ -27,12 +27,15 @@
 body {
     display: flex;
     flex-flow:column nowrap;
+    min-height: 100vh;
+
 }
 
 .window {
     display: flex;
     background-color: #958989;
     padding: 20px;
+    /* flex: 1 1 auto; */
 }
 
 .container {
