@@ -9,24 +9,24 @@ gridAdjustor.addEventListener("click", () => {
         userInput = prompt("A number less than 100 for grid size.");
         if (userInput === "" || userInput === null) {
             alert("Input cancelled");
-            // initiateGrids();
+            initiateGrids();
             break;
         } else if (userInput > 100) {
             alert("LESS THAN 100!");
             continue;
         } else {
+            container.innerHTML = "";
+            initiateGrids(+userInput);
             break;
         }
     }
-    container.innerHTML = "";
-    initiateGrids(+userInput);
+
 });
 
 
 
 function initiateGrids(gridNum = 16) {
     
-
     for (let i = 1; i <= gridNum; i++) {
         for (let j = 1; j <= gridNum; j++) {
             let grid = document.createElement("div");
