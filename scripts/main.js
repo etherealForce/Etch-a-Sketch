@@ -1,7 +1,12 @@
 const container = document.querySelector(".container");
 initiateGrids();
 const grids = document.querySelectorAll(".container div");
-const gridadjustor = document.querySelector("#openPrompt");
+const gridAdjustor = document.querySelector("#openPrompt");
+
+gridAdjustor.addEventListener("click", (e) => {
+    
+});
+
 grids.forEach((aGrid)=> {
     aGrid.addEventListener("mouseover", (e) => {
         aGrid.style.cssText = `background-color: rgb(${rgbNoGenerator()}, ${rgbNoGenerator()}, ${rgbNoGenerator()})`;
