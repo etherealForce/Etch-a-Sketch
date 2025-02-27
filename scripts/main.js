@@ -1,9 +1,12 @@
 const container = document.querySelector(".container");
 const containerSize = 500;
-initiateGrids();
 const gridAdjustor = document.querySelector("#openPrompt");
 const rainbowBtn = document.querySelector("#rainbow");
 const normalBtn = document.querySelector("#normal");
+
+initiateGrids();
+
+
 
 gridAdjustor.addEventListener("click", () => {
     let userInput;
@@ -26,7 +29,7 @@ gridAdjustor.addEventListener("click", () => {
 
 
 
-function initiateGrids(gridNum = 16, gridColor) {
+function initiateGrids(gridNum = 16) {
     
     for (let i = 1; i <= gridNum; i++) {
         for (let j = 1; j <= gridNum; j++) {
@@ -36,8 +39,15 @@ function initiateGrids(gridNum = 16, gridColor) {
         }       
     }
     const grids = document.querySelectorAll(".container div");
-    // rainbowGrids(grids);
+
     normalGrids(grids);
+    rainbowBtn.addEventListener("click", () => {
+        rainbowGrids(grids);
+    });
+    
+    normalBtn.addEventListener("click", () => {
+        normalGrids(grids);
+    });
     
 }
 
@@ -58,5 +68,5 @@ function normalGrids(grids) {
         aGrid.addEventListener("mouseover", function () {
             this.style.cssText += "background-color:rgba(33, 36, 43, 0.71);";
         })
-    })
+    });
 }
