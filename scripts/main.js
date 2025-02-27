@@ -4,6 +4,7 @@ const gridAdjustor = document.querySelector("#openPrompt");
 const rainbowBtn = document.querySelector("#rainbow");
 const normalBtn = document.querySelector("#normal");
 const resetBtn = document.querySelector("#reset");
+const opaqueBtn = document.querySelector("#opaque");
 initiateGrids();
 
 resetBtn.addEventListener("click", () => {
@@ -55,6 +56,9 @@ function initiateGrids(gridNum = 16) {
         normalGrids(grids);
     });
     
+    opaqueBtn.addEventListener("click", () => {
+        opaqueGrids(grids);
+    })
 }
 
 function rgbNoGenerator() {
@@ -71,8 +75,24 @@ function rainbowGrids(grids) {
 
 function normalGrids(grids) {
     grids.forEach((aGrid) => {
-        aGrid.addEventListener("mouseover", function () {         
-            this.style.backgroundColor = `rgba(37, 37, 40, 0.9)`;
+        aGrid.addEventListener("mouseover", function () {      
+            this.style.backgroundColor = `rgba(37, 37, 40, 0.85)`;
+        })
+    });
+}
+
+function opaqueGrids(grids) {
+    grids.forEach((aGrid) => {
+        aGrid.dataset.opacity  = "0";
+        aGrid.addEventListener("mouseover", function () {      
+            let currentOpacity = parseFloat(this.dataset.opacity);
+            
+            if (currentOpacity < 1) {
+                currentOpacity += 0.1;
+            }
+            this.dataset.opacity = currentOpacity;
+            this.style.backgroundColor = `rgba(37, 37, 40, ${currentOpacity})`;
+            // this.style.backgroundColor = `rgba(46, 46, 57, 0.3)`;
         })
     });
 }

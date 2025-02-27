@@ -75,10 +75,8 @@ body {
 
 .container div {
     border: 1px solid black;
-    /* width: 29.411px;
-    height: 29.411px; */
     flex: 1 1 auto;
-    background-color: #878c92;
+    /* background-color: #878c92; */
     box-sizing: border-box;
 }
 
