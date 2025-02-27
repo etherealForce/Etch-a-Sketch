@@ -69,10 +69,10 @@ function rainbowGrids(grids) {
     });
 }
 
-function normalGrids(grids, opacity) {
+function normalGrids(grids) {
     grids.forEach((aGrid) => {
         aGrid.addEventListener("mouseover", function () {         
-            this.style.backgroundColor = "rgba(30, 31, 34, 0.47)";
+            this.style.backgroundColor = `rgba(37, 37, 40, 0.9)`;
         })
     });
 }
