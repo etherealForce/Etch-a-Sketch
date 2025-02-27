@@ -84,3 +84,13 @@ body {
 /* .container div:hover {
     background-color: brown;
 } */
+.footer {
+    background-color: #403737;
+    color: #a29898;
+    font-weight:bold;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    margin-top: 25px;
+}
