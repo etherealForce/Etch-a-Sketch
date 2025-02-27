@@ -1,5 +1,5 @@
 const container = document.querySelector(".container");
-const containerSize = 500;
+const containerSize = 600;
 const gridAdjustor = document.querySelector("#openPrompt");
 const rainbowBtn = document.querySelector("#rainbow");
 const normalBtn = document.querySelector("#normal");
