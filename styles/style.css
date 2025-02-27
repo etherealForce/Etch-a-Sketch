@@ -70,7 +70,7 @@ body {
     height: 500px;
     display: flex;
     flex-flow: row wrap;
-    background-color:#1c1a1a;
+    /* background-color:#1c1a1a; */
 }
 
 .container div {
