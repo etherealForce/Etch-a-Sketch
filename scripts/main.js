@@ -3,10 +3,13 @@ const containerSize = 500;
 const gridAdjustor = document.querySelector("#openPrompt");
 const rainbowBtn = document.querySelector("#rainbow");
 const normalBtn = document.querySelector("#normal");
-
+const resetBtn = document.querySelector("#reset");
 initiateGrids();
 
-
+resetBtn.addEventListener("click", () => {
+    container.innerHTML = "";
+    initiateGrids();
+});
 
 gridAdjustor.addEventListener("click", () => {
     let userInput;
@@ -25,6 +28,10 @@ gridAdjustor.addEventListener("click", () => {
         }
     }
 
+    resetBtn.addEventListener("click", () => {
+        container.innerHTML = "";
+        initiateGrids(userInput);
+    });
 });
 
 
