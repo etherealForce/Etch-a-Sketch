@@ -83,7 +83,7 @@ function normalGrids(grids) {
 
 function opaqueGrids(grids) {
     grids.forEach((aGrid) => {
-        aGrid.dataset.opacity  = "0";
+        aGrid.dataset.opacity  = 0;
         aGrid.addEventListener("mouseover", function () {      
             let currentOpacity = parseFloat(this.dataset.opacity);
             
